@@ -8,8 +8,8 @@ import {
 
 const router = express.Router();
 
-router.get('/projects', getAllProjects);
-router.get('/projects/:id', getProjectById);
-router.post('/projects', createProject);
+router.get('/', getAllProjects);
+router.get('/:id', getProjectById);
+router.post('/', createProject);
 
 export default router;

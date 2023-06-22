@@ -8,7 +8,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:5000",
+      "url": "http://localhost:4000",
       "description": "local server"
     },
     {
@@ -22,41 +22,45 @@
       "description": "Default routes for testing"
     },
     {
-      "name": "Client",
+      "name": "Test",
+      "description": "Routes for testing"
+    },
+    {
+      "name": "User Management",
       "description": "Features For clients "
     },
     {
-      "name": "Subscription",
+      "name": "Projects Management",
       "description": "Features For subscriptions "
     },
     {
-      "name": "Admin",
-      "description": "Features For admin "
+      "name": "Skills Management",
+      "description": "Features For subscriptions "
     },
     {
-      "name": "Wallet",
-      "description": "Wallet Features "
+      "name": "Docs Management",
+      "description": "Route for managing tutorials, blogs , videos and tips"
     },
     {
-      "name": "Test",
-      "description": "Test every routes "
+      "name": "Blogs Management",
+      "description": "Route for managing my personal tutorials, blogs , videos and tips"
     },
     {
-      "name": "Order",
-      "description": "Order Features"
+      "name": "Category",
+      "description": "Route for managing my personal tutorials, blogs , videos and tips"
     },
     {
-      "name": "Admin-Flow",
-      "description": "Test Complete Flow for Admin"
-    },
-    {
-      "name": "Client-Flow",
-      "description": "Test Complete Flow for Client"
+      "name": "Settings Management",
+      "description": "Different Settings like category, project-category,tags"
     }
   ],
   "paths": {
     "/": {
       "get": {
+        "tags": [
+          "Index"
+        ],
+        "summary": "Portfolio admin panel base route",
         "description": "",
         "parameters": [],
         "responses": {
@@ -68,6 +72,10 @@
     },
     "/api/blogs/posts": {
       "get": {
+        "tags": [
+          "Blogs Management"
+        ],
+        "summary": "All learning related blogs ",
         "description": "",
         "parameters": [],
         "responses": {
@@ -77,6 +85,10 @@
         }
       },
       "post": {
+        "tags": [
+          "Blogs Management"
+        ],
+        "summary": "All learning related blogs ",
         "description": "",
         "parameters": [],
         "responses": {
@@ -105,6 +117,10 @@
     },
     "/api/blogs/posts/{id}": {
       "get": {
+        "tags": [
+          "Blogs Management"
+        ],
+        "summary": "All learning related blogs ",
         "description": "",
         "parameters": [
           {
@@ -123,6 +139,10 @@
         }
       },
       "put": {
+        "tags": [
+          "Blogs Management"
+        ],
+        "summary": "All learning related blogs ",
         "description": "",
         "parameters": [
           {
@@ -158,6 +178,10 @@
         }
       },
       "delete": {
+        "tags": [
+          "Blogs Management"
+        ],
+        "summary": "All learning related blogs ",
         "description": "",
         "parameters": [
           {
@@ -176,8 +200,12 @@
         }
       }
     },
-    "/api/docs/tutorials": {
+    "/api/docs/": {
       "get": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
         "description": "",
         "parameters": [],
         "responses": {
@@ -187,6 +215,10 @@
         }
       },
       "post": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
         "description": "",
         "parameters": [],
         "responses": {
@@ -196,8 +228,12 @@
         }
       }
     },
-    "/api/docs/tutorials/{id}": {
+    "/api/docs/{id}": {
       "get": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
         "description": "",
         "parameters": [
           {
@@ -216,6 +252,10 @@
         }
       },
       "put": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
         "description": "",
         "parameters": [
           {
@@ -234,6 +274,58 @@
         }
       },
       "delete": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/api/docs/blogs/": {
+      "get": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/docs/blogs/{id}": {
+      "get": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
         "description": "",
         "parameters": [
           {
@@ -250,10 +342,54 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {}
       }
     },
-    "/api/projects/projects": {
+    "/api/docs/tutorials": {
       "get": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
         "description": "",
         "parameters": [],
         "responses": {
@@ -263,6 +399,155 @@
         }
       },
       "post": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/docs/tutorials/{id}": {
+      "get": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Docs Management"
+        ],
+        "summary": "Tutorials",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/api/projects/": {
+      "get": {
+        "tags": [
+          "Projects Management"
+        ],
+        "summary": "projects ",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Projects Management"
+        ],
+        "summary": "projects ",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/api/projects/{id}": {
+      "get": {
+        "tags": [
+          "Projects Management"
+        ],
+        "summary": "projects ",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/settings/category": {
+      "get": {
+        "tags": [
+          "Settings Management",
+          "Category"
+        ],
+        "summary": "category ",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Settings Management",
+          "Category"
+        ],
+        "summary": "category ",
         "description": "",
         "parameters": [],
         "responses": {
@@ -278,9 +563,6 @@
                 "properties": {
                   "name": {
                     "example": "any"
-                  },
-                  "description": {
-                    "example": "any"
                   }
                 }
               }
@@ -289,51 +571,13 @@
         }
       }
     },
-    "/api/projects/projects/{id}": {
+    "/api/settings/category/{id}": {
       "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
+        "tags": [
+          "Settings Management",
+          "Category"
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      }
-    },
-    "/api/settings/": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "post": {
-        "description": "",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/settings/{id}": {
-      "get": {
+        "summary": "category ",
         "description": "",
         "parameters": [
           {
@@ -355,6 +599,109 @@
         }
       },
       "put": {
+        "tags": [
+          "Settings Management",
+          "Category"
+        ],
+        "summary": "category ",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Settings Management",
+          "Category"
+        ],
+        "summary": "category ",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/settings/project-category": {
+      "get": {
+        "tags": [
+          "Settings Management",
+          "Project Category"
+        ],
+        "summary": "project category ",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Settings Management",
+          "Project Category"
+        ],
+        "summary": "project category ",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/settings/project-category/{id}": {
+      "put": {
+        "tags": [
+          "Settings Management",
+          "Project Category"
+        ],
+        "summary": "project category ",
         "description": "",
         "parameters": [
           {
@@ -373,6 +720,11 @@
         }
       },
       "delete": {
+        "tags": [
+          "Settings Management",
+          "Project Category"
+        ],
+        "summary": "project category ",
         "description": "",
         "parameters": [
           {
@@ -391,8 +743,12 @@
         }
       }
     },
-    "/api/skills/skills": {
+    "/api/skills/": {
       "get": {
+        "tags": [
+          "Skills Management"
+        ],
+        "summary": "Skills",
         "description": "",
         "parameters": [],
         "responses": {
@@ -402,6 +758,10 @@
         }
       },
       "post": {
+        "tags": [
+          "Skills Management"
+        ],
+        "summary": "Skills",
         "description": "",
         "parameters": [],
         "responses": {
@@ -428,8 +788,12 @@
         }
       }
     },
-    "/api/skills/skills/{id}": {
+    "/api/skills/{id}": {
       "get": {
+        "tags": [
+          "Skills Management"
+        ],
+        "summary": "Skills",
         "description": "",
         "parameters": [
           {
@@ -448,6 +812,10 @@
         }
       },
       "put": {
+        "tags": [
+          "Skills Management"
+        ],
+        "summary": "Skills",
         "description": "",
         "parameters": [
           {
@@ -483,6 +851,10 @@
         }
       },
       "delete": {
+        "tags": [
+          "Skills Management"
+        ],
+        "summary": "Skills",
         "description": "",
         "parameters": [
           {
@@ -503,6 +875,10 @@
     },
     "/api/users/": {
       "post": {
+        "tags": [
+          "User Management"
+        ],
+        "summary": "User",
         "description": "",
         "parameters": [],
         "responses": {
@@ -537,6 +913,10 @@
     },
     "/api/users/auth": {
       "post": {
+        "tags": [
+          "User Management"
+        ],
+        "summary": "User",
         "description": "",
         "parameters": [],
         "responses": {
@@ -568,6 +948,10 @@
     },
     "/api/users/logout": {
       "post": {
+        "tags": [
+          "User Management"
+        ],
+        "summary": "User",
         "description": "",
         "parameters": [],
         "responses": {
@@ -579,6 +963,10 @@
     },
     "/api/users/profile": {
       "get": {
+        "tags": [
+          "User Management"
+        ],
+        "summary": "User",
         "description": "",
         "parameters": [],
         "responses": {
@@ -594,6 +982,10 @@
         }
       },
       "put": {
+        "tags": [
+          "User Management"
+        ],
+        "summary": "User",
         "description": "",
         "parameters": [],
         "responses": {
@@ -631,6 +1023,10 @@
     },
     "/api/users/experience": {
       "get": {
+        "tags": [
+          "User Management"
+        ],
+        "summary": "User",
         "description": "",
         "parameters": [],
         "responses": {
@@ -646,6 +1042,10 @@
         }
       },
       "put": {
+        "tags": [
+          "User Management"
+        ],
+        "summary": "User",
         "description": "",
         "parameters": [],
         "responses": {

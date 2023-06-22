@@ -9,6 +9,8 @@
 
 // Get all skills
 export const getAllSkills = (req, res) => {
+	// #swagger.tags = ['Skills Management']
+	// #swagger.summary = 'Skills'
 	// Logic to fetch all skills from the database
 	// For example, using the Skill model: Skill.find({})
 	// Send the skills as a response
@@ -17,6 +19,8 @@ export const getAllSkills = (req, res) => {
 
 // Get skill by ID
 export const getSkillById = (req, res) => {
+	// #swagger.tags = ['Skills Management']
+	// #swagger.summary = 'Skills'
 	const { id } = req.params;
 	// Logic to fetch a skill by its ID from the database
 	// For example, using the Skill model: Skill.findById(id)
@@ -26,6 +30,8 @@ export const getSkillById = (req, res) => {
 
 // Create a new skill
 export const createSkill = (req, res) => {
+	// #swagger.tags = ['Skills Management']
+	// #swagger.summary = 'Skills'
 	// Extract skill data from the request body
 	const { name, category } = req.body;
 	// Logic to create a new skill in the database
@@ -36,6 +42,8 @@ export const createSkill = (req, res) => {
 
 // Update a skill by ID
 export const updateSkill = (req, res) => {
+	// #swagger.tags = ['Skills Management']
+	// #swagger.summary = 'Skills'
 	const { id } = req.params;
 	// Extract updated skill data from the request body
 	const { name, category } = req.body;
@@ -47,6 +55,8 @@ export const updateSkill = (req, res) => {
 
 // Delete a skill by ID
 export const deleteSkill = (req, res) => {
+	// #swagger.tags = ['Skills Management']
+	// #swagger.summary = 'Skills'
 	const { id } = req.params;
 	// Logic to delete the skill from the database
 	// For example, using the Skill model: Skill.findByIdAndDelete(id)

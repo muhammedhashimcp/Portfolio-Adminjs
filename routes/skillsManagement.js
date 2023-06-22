@@ -10,18 +10,17 @@ import {
 const router = express.Router();
 
 // GET /skills
-router.get('/skills', getAllSkills);
-
+router.get('/', getAllSkills)
 // GET /skills/:id
-router.get('/skills/:id', getSkillById);
+router.get('/:id', getSkillById);
 
 // POST /skills
-router.post('/skills', createSkill);
+router.post('/', createSkill);
 
 // PUT /skills/:id
-router.put('/skills/:id', updateSkill);
+router.put('/:id', updateSkill);
 
 // DELETE /skills/:id
-router.delete('/skills/:id', deleteSkill);
+router.delete('/:id', deleteSkill);
 
 export default router;

@@ -1,5 +1,7 @@
 // controllers/blog.js
 const getPosts = (req, res) => {
+	// #swagger.tags = ['Blogs Management']
+	// #swagger.summary = 'All learning related blogs '
 	// Logic to fetch all blog posts from the database
 	// Example response:
 	const posts = [
@@ -14,6 +16,8 @@ const getPosts = (req, res) => {
 };
 
 const createPost = (req, res) => {
+	// #swagger.tags = ['Blogs Management']
+	// #swagger.summary = 'All learning related blogs '
 	// Logic to create a new blog post in the database
 	const { title, content } = req.body;
 	// Example response:
@@ -22,6 +26,8 @@ const createPost = (req, res) => {
 };
 
 const getPost = (req, res) => {
+	// #swagger.tags = ['Blogs Management']
+	// #swagger.summary = 'All learning related blogs '
 	// Logic to fetch a specific blog post by ID from the database
 	const { id } = req.params;
 	// Example response:
@@ -34,6 +40,8 @@ const getPost = (req, res) => {
 };
 
 const updatePost = (req, res) => {
+	// #swagger.tags = ['Blogs Management']
+	// #swagger.summary = 'All learning related blogs '
 	// Logic to update a specific blog post by ID in the database
 	const { id } = req.params;
 	const { title, content } = req.body;
@@ -43,6 +51,8 @@ const updatePost = (req, res) => {
 };
 
 const deletePost = (req, res) => {
+	// #swagger.tags = ['Blogs Management']
+	// #swagger.summary = 'All learning related blogs '
 	// Logic to delete a specific blog post by ID from the database
 	const { id } = req.params;
 	// Example response:

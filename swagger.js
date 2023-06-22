@@ -30,37 +30,41 @@ const doc = {
 			description: 'Default routes for testing',
 		},
 		{
-			name: 'Client',
+			name: 'Test',
+			description: 'Routes for testing',
+		},
+		{
+			name: 'User Management',
 			description: 'Features For clients ',
 		},
 		{
-			name: 'Subscription',
+			name: 'Projects Management',
 			description: 'Features For subscriptions ',
 		},
 		{
-			name: 'Admin',
-			description: 'Features For admin ',
+			name: 'Skills Management',
+			description: 'Features For subscriptions ',
 		},
 		{
-			name: 'Wallet',
-			description: 'Wallet Features ',
+			name: 'Docs Management',
+			description:
+				'Route for managing tutorials, blogs , videos and tips',
 		},
 		{
-			name: 'Test',
-			description: 'Test every routes ',
+			name: 'Blogs Management',
+			description:
+				'Route for managing my personal tutorials, blogs , videos and tips',
 		},
 		{
-			name: 'Order',
-			description: 'Order Features',
+			name: 'Category',
+			description:
+				'Route for managing my personal tutorials, blogs , videos and tips',
 		},
 		{
-			name: 'Admin-Flow',
-			description: 'Test Complete Flow for Admin',
-		},
-		{
-			name: 'Client-Flow',
-			description: 'Test Complete Flow for Client',
-		},
+			name: 'Settings Management',
+			description:
+				'Different Settings like category, project-category,tags',
+		}
 	],
 };
 const outputFile = './swagger-output.json';

@@ -6,6 +6,8 @@ import generateToken from '../utils/generateToken.js';
 // @route   POST /api/users/auth
 // @access  Public
 const authUser = asyncHandler(async (req, res) => {
+	// #swagger.tags = ['User Management']
+	// #swagger.summary = 'User'
 	const { email, password } = req.body;
 
 	const user = await User.findOne({ email });
@@ -28,6 +30,8 @@ const authUser = asyncHandler(async (req, res) => {
 // @route   POST /api/users
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
+	// #swagger.tags = ['User Management']
+	// #swagger.summary = 'User'
 	const { name, email, password } = req.body;
 
 	const userExists = await User.findOne({ email });
@@ -61,6 +65,8 @@ const registerUser = asyncHandler(async (req, res) => {
 // @route   POST /api/users/logout
 // @access  Public
 const logoutUser = (req, res) => {
+	// #swagger.tags = ['User Management']
+	// #swagger.summary = 'User'
 	res.cookie('jwt', '', {
 		httpOnly: true,
 		expires: new Date(0),
@@ -72,6 +78,8 @@ const logoutUser = (req, res) => {
 // @route   GET /api/users/profile
 // @access  Private
 const getUserProfile = asyncHandler(async (req, res) => {
+	// #swagger.tags = ['User Management']
+	// #swagger.summary = 'User'
 	const user = await User.findById(req.user._id);
 
 	if (user) {
@@ -90,6 +98,8 @@ const getUserProfile = asyncHandler(async (req, res) => {
 // @route   PUT /api/users/profile
 // @access  Private
 const updateUserProfile = asyncHandler(async (req, res) => {
+	// #swagger.tags = ['User Management']
+	// #swagger.summary = 'User'
 	const user = await User.findById(req.user._id);
 
 	if (user) {

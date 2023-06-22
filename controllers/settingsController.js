@@ -8,11 +8,15 @@ let categories = [
 
 // Get all categories
 const getAllCategories = (req, res) => {
+	// #swagger.tags = ['Settings Management','Category']
+	// #swagger.summary = 'category '
 	res.json(categories);
 };
 
 // Get a single category by ID
 const getCategoryById = (req, res) => {
+	// #swagger.tags = ['Settings Management','Category']
+	// #swagger.summary = 'category '
 	const categoryId = parseInt(req.params.id);
 	const category = categories.find((c) => c.id === categoryId);
 
@@ -25,6 +29,8 @@ const getCategoryById = (req, res) => {
 
 // Create a new category
 const createCategory = (req, res) => {
+	// #swagger.tags = ['Settings Management','Category']
+	// #swagger.summary = 'category '
 	const { name } = req.body;
 	const newCategory = { id: categories.length + 1, name };
 	categories.push(newCategory);
@@ -33,6 +39,8 @@ const createCategory = (req, res) => {
 
 // Update an existing category
 const updateCategory = (req, res) => {
+	// #swagger.tags = ['Settings Management','Category']
+	// #swagger.summary = 'category '
 	const categoryId = parseInt(req.params.id);
 	const { name } = req.body;
 	const category = categories.find((c) => c.id === categoryId);
@@ -47,6 +55,8 @@ const updateCategory = (req, res) => {
 
 // Delete a category
 const deleteCategory = (req, res) => {
+	// #swagger.tags = ['Settings Management','Category']
+	// #swagger.summary = 'category '
 	const categoryId = parseInt(req.params.id);
 	const index = categories.findIndex((c) => c.id === categoryId);
 
@@ -63,32 +73,40 @@ const deleteCategory = (req, res) => {
 
 // GET /project-categories
 export const getAllProjectCategories = (req, res) => {
-  // Logic to fetch all project categories from the database
-  // and send the response
-  res.json({ message: 'Get all project categories' });
+	// #swagger.tags = ['Settings Management','Project Category']
+	// #swagger.summary = 'project category '
+	// Logic to fetch all project categories from the database
+	// and send the response
+	res.json({ message: 'Get all project categories' });
 };
 
 // POST /project-categories
 export const createProjectCategory = (req, res) => {
-  // Logic to create a new project category in the database
-  // using the request body and send the response
-  res.json({ message: 'Create project category' });
+	// #swagger.tags = ['Settings Management','Project Category']
+	// #swagger.summary = 'project category '
+	// Logic to create a new project category in the database
+	// using the request body and send the response
+	res.json({ message: 'Create project category' });
 };
 
 // PUT /project-categories/:id
 export const updateProjectCategory = (req, res) => {
-  const { id } = req.params;
-  // Logic to update the project category with the given id
-  // using the request body and send the response
-  res.json({ message: `Update project category ${id}` });
+	// #swagger.tags = ['Settings Management','Project Category']
+	// #swagger.summary = 'project category '
+	const { id } = req.params;
+	// Logic to update the project category with the given id
+	// using the request body and send the response
+	res.json({ message: `Update project category ${id}` });
 };
 
 // DELETE /project-categories/:id
 export const deleteProjectCategory = (req, res) => {
-  const { id } = req.params;
-  // Logic to delete the project category with the given id
-  // from the database and send the response
-  res.json({ message: `Delete project category ${id}` });
+	// #swagger.tags = ['Settings Management','Project Category']
+	// #swagger.summary = 'project category '
+	const { id } = req.params;
+	// Logic to delete the project category with the given id
+	// from the database and send the response
+	res.json({ message: `Delete project category ${id}` });
 };
 
 export {

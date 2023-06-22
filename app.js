@@ -16,8 +16,8 @@ import settingsRoutes from './routes/settingsManagement.js';
 import skillsRoutes from './routes/skillsManagement.js';
 import usersRoutes from './routes/userManagement.js';
 // our config
-dotenv.config(); 
-const app = express(); 
+dotenv.config();
+const app = express();
 db();
 const __dirname = path.resolve();
 
@@ -27,6 +27,8 @@ app.use(`${admin.options.rootPath}`, adminRouter);
 app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get('/', (req, res) => {
+	// #swagger.tags = ['Index']
+	// #swagger.summary = 'Portfolio admin panel base route'
 	res.status(200).json('Portfolio base Route');
 });
 app.use('/api/blogs', blogsRoutes);
@@ -40,9 +42,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-	console.log(
-		`Server started on http://localhost:${PORT}/`
-	);
+	console.log(`Server started on http://localhost:${PORT}/`);
 	console.log(
 		`Swagger Documents available on  http://localhost:${PORT}/api/v1/docs`
 	);
@@ -50,4 +50,3 @@ app.listen(PORT, () => {
 		`AdminJS started on http://localhost:${PORT}/${admin.options.rootPath}`
 	);
 });
- 
