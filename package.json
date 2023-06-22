@@ -4,6 +4,9 @@
   "description": "Portfolio with admin panel ",
   "license": "MIT",
   "type": "module",
+  "engines": {
+    "node": ">=18.15.0"
+  },
   "scripts": {
     "start": "node app.js -e js",
     "dev": "nodemon app.js",
